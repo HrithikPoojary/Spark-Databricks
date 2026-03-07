@@ -1,11 +1,11 @@
 
 def read_booking_summary(spark):
-    schema = "booked_by string , booked_date date , revenue double"
+    file_schema  == 'booked_by string , booking_date date , revenue double'
 
     df = (
             spark.read.format("csv")
             .option("header" , "true")
-            .schema(schema)
+            .schema(file_schema)
             .load(path  = '/Volumes/dev/spark_db/datasets/spark_programming/data/booking-summary.csv')
     )
 
